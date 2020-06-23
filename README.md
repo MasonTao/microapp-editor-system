@@ -1,4 +1,4 @@
-## microapp-editor-system
+## A Platform For Automatically Generating Websites.
 
 ### Getting Started
 
@@ -13,4 +13,3 @@ Start the dev server,
 ```bash
 $ yarn start
 ```
-
