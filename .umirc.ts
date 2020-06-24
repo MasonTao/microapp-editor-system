@@ -7,6 +7,9 @@ export default defineConfig({
   sass: {
     implementation: require('node-sass'),
   },
+  alias: {
+    '~components': '@/components'
+  },
   dva: {},
   routes: [
     { path: '/', component: '@/pages/index' },

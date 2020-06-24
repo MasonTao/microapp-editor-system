@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-
 import { IPageModelState, ConnectProps, Loading, connect } from 'umi';
+import { EditorHeader } from '~components/editor-header';
 
 interface PageProps extends ConnectProps {
   pageStore: IPageModelState;
   loading: boolean;
 }
 
-const IndexPage: React.FC<PageProps> = ({ pageStore, dispatch }) => {
+const IndexPage: React.FC<PageProps> = ({ pageStore,loading, dispatch }) => {
   useEffect(() => {
     const { pageList } = pageStore;
     const { bg } = pageList[0];
@@ -15,7 +15,11 @@ const IndexPage: React.FC<PageProps> = ({ pageStore, dispatch }) => {
     if (!dispatch) return;
     dispatch({ type: 'bgStore/setData', payload: bg });
   }, []);
-  return <div>This is editor system! </div>;
+  return (
+    <div id="main">
+      <EditorHeader />
+    </div>
+  );
 };
 
 export default connect(

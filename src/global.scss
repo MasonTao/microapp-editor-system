@@ -1,2 +1,7 @@
+//global style
 @import 'css/color.scss';
 @import 'css/reset.scss';
+@import 'css/mixins.scss';
+
+//component style
+@import '/components/editor-header/header/index.scss'
